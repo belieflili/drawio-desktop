@@ -1,0 +1,50 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="YOLOv8n-TFO + DeepSORT 秧苗检测流程">
+    <mxGraphModel dx="800" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="A" value="数据采集<br>(无人机图像获取)" style="rounded=1;whiteSpace=wrap;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="40" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="B" value="YOLOv8n-TFO检测<br>(输出检测框+置信度)" style="rounded=1;whiteSpace=wrap;fillColor=#FFFDE7;strokeColor=#F9A825;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="130" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="C" value="特征提取<br>(外观特征向量)" style="rounded=1;whiteSpace=wrap;fillColor=#E3F2FD;strokeColor=#1565C0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="220" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="D" value="DeepSORT 跟踪模块" style="rounded=1;whiteSpace=wrap;fillColor=#F3E5F5;strokeColor=#6A1B9A;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="310" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="E" value="卡尔曼滤波 + 匈牙利算法" style="rounded=1;whiteSpace=wrap;fillColor=#E1BEE7;strokeColor=#8E24AA;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="200" y="400" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="F" value="秧苗计数模块<br>(单帧+连续帧验证)" style="rounded=1;whiteSpace=wrap;fillColor=#FFEBEE;strokeColor=#C62828;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="490" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="G" value="结果显示与输出<br>(可视化界面+数据文件)" style="rounded=1;whiteSpace=wrap;fillColor=#E0F7FA;strokeColor=#00838F;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="580" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="AtoB" edge="1" source="A" target="B" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="BtoC" edge="1" source="B" target="C" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="CtoD" edge="1" source="C" target="D" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="DtoE" edge="1" source="D" target="E" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="EtoF" edge="1" source="E" target="F" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="FtoG" edge="1" source="F" target="G" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
